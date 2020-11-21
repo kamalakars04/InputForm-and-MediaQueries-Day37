@@ -16,6 +16,7 @@
       <div>
         <label for="pwd">password input type: </label>
         <input type="password" id="pwd" name="pwd">
+        <output class="pwd"></output>
       </div>
       <div>
         <label for="email">email input type: </label>
@@ -93,6 +94,17 @@
         errorMobile.textContent = "";
         else
         errorMobile.textContent = "Invalid number"
+      });
+
+      const password = document.querySelector("#pwd");
+      const errorPwd = document.querySelector(".pwd");
+      password.addEventListener('input',function()
+      {
+        let pwdRegex = RegExp("^.{8,}$");
+        if(pwdRegex.test(password.value) || password.value == "")
+        errorPwd.textContent = "";
+        else
+        errorPwd.textContent = "Invalid Password";
       });
     </script>
 </body>
