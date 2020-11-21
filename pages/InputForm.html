@@ -52,15 +52,15 @@
       </div>
     </form>
     <script>
-      const name = document.querySelector("#name");
-      const error = document.querySelector(".text-error");
+      const nameInput = document.querySelector("#name");
+      const errorText = document.querySelector(".text-error");
       name.addEventListener('input',function()
       {
         let nameRegex = RegExp("^[A-Z][A-Za-z]{2,}$")
-        if(nameRegex.test(name.value) || name.value == "")
-        error.textContent = "";
+        if(nameRegex.test(nameInput.value) || nameInput.value == "")
+        errorText.textContent = "";
         else
-        error.textContent = "Invalid Name"
+        errorText.textContent = "Invalid Name"
       });
     </script>
 </body>
