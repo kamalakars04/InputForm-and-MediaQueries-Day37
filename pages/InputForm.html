@@ -48,13 +48,20 @@
       <div>
         <label for="salary">Choose your salary </label>
         <input type="range" id="salary" name="salary" min="30000" max="50000" step="100" value="30000">
-        <output class="salary-output" for="salary">
+        <output class="salary-output" for="salary">30000</output>
       </div>
       <div>
         <button>Submit</button>
       </div>
     </form>
     <script>
+      const salary = document.querySelector("#salary");
+      const output = document.querySelector(".salary-output");
+      salary.addEventListener('input',function()
+      {
+          output.textContent = salary.value;
+      });
+
       const nameInput = document.querySelector("#name");
       const errorText = document.querySelector(".text-error");
       nameInput.addEventListener('input',function()
