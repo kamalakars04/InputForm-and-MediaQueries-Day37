@@ -2,18 +2,26 @@ html, input {
     font-family: sans-serif;
   }
 
+  @media screen and (min-width: 300px) and (max-width: 600px) {
+    .headerContainer {
+      background-color: blue;
+    }
+  }
+  @media screen and (min-width: 600px) {
+    .headerContainer {
+      background-color: tomato;
+    }
+  }
+
   .headerContainer
 {
-    display:flex;
-    flex-flow:column wrap;
-    align-content:center;
-    background:tomato;
     font-weight:bold;
     padding:10px;
+    align-items: center;
+    align-content: center;  
 }
 
   body {
-    width: 100%;
     max-width: 600px;
     margin: 0px auto;
     padding: 2em;
@@ -29,7 +37,7 @@ html, input {
     margin-bottom: 20px;
     display: flex;
     flex-flow: row wrap;
-    align-items: center;
+    align-items: flex-start;
   }
 
   label, input, button {
@@ -39,8 +47,8 @@ html, input {
 
   label {
     text-align: right;
-    width: 30%;
     margin-right: 2%;
+    width: 180px;
   }
 
   input {
@@ -48,7 +56,7 @@ html, input {
   }
 
   button {
-    width: 70%;
+    width: 80px;
     margin: 0 auto;
   }
   error-output
@@ -57,3 +65,5 @@ html, input {
       font-style: italic;
       color: red;
   }
+
+  
